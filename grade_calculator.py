@@ -1,3 +1,4 @@
+# How to grade using Python
 marks = int(input("enter marks: "))
 if marks >= 85:
     grades = 'A'

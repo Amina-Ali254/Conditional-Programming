@@ -1,5 +1,5 @@
 # Create grading calculation using conditional programming, example 'A' , 'A-' etc.?
-# Define the calculate_grade function
+# Defined Calculations
 def calculate_grade(marks):
     if marks >= 90:
         if marks >= 97:

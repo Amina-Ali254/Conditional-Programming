@@ -33,9 +33,9 @@ def calculate_grade(marks):
         return 'F'
 
 # Halima's scores
-english_marks = 90
-math_marks = 70
-science_marks = 65
+english_marks = int(input("Enter english marks:"))
+math_marks = int(input("Enter math marks:"))
+science_marks = int(input("Enter science marks:"))
 
 # Calculate grades
 english_grade = calculate_grade(english_marks)

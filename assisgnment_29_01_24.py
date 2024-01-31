@@ -90,12 +90,23 @@ else:
 
 # Write a python program to determine the season based on the month?
 
-def determine_season(month):
-    seasons = "{'March': 'Spring', 'April': 'Spring', 'May': 'Spring','June': 'Winter', 'July': 'Winter', 'August': 'Winter','September': 'Winter', 'October': 'Winter', 'November': 'Autumn','December': 'summer', 'January': 'summer, 'February': 'summer'}"
-    return seasons.get(month.capitalize(), "Invalid month")
-month = input("Enter the month: ")
-season = determine_season(month)
-if season != "Invalid month":
-    print(f"The season in {month} is {season}.")
-else:
-    print("Please enter a valid month.")
+def determine_season_in_kenya(month):
+    seasons = {
+        'January': 'Dry', 'February': 'Dry',
+        'March': 'Long Rains', 'April': 'Long Rains', 'May': 'Long Rains',
+        'June': 'Dry', 'July': 'Dry', 'August': 'Dry', 
+        'September': 'Dry', 'October': 'Short Rains',
+        'November': 'Short Rains', 'December': 'Short Rains',
+        1: 'Dry', 2: 'Dry', 3: 'Long Rains', 4: 'Long Rains', 5: 'Long Rains',
+        6: 'Dry', 7: 'Dry', 8: 'Dry', 9: 'Dry', 10: 'Short Rains',
+        11: 'Short Rains', 12: 'Short Rains'}
+    if isinstance(month, str):
+        month = month.title()
+    return seasons.get(month, "Invalid month")
+month_input = input("Enter the month (name or number): ")
+try:
+    month_input = int(month_input)
+except ValueError:
+    pass
+season = determine_season_in_kenya(month_input)
+print(f"The season in Kenya during {month_input} is: {season}.")

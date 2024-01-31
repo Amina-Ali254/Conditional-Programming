@@ -8,7 +8,7 @@ def convert_seconds(total_seconds):
     return hours, minutes, seconds
 total_seconds = int(input("Enter the number of seconds: "))
 hours, minutes, seconds = convert_seconds(total_seconds)
-print("{total_seconds} seconds is equal to {hours} hours, {minutes} minutes, and {seconds} seconds.")
+print(f"{total_seconds} seconds is equal to {hours} hours, {minutes} minutes, and {seconds} seconds.")
 
 # Write a program to determine if a given number is positive, negative, or zero?
 
@@ -21,7 +21,7 @@ def check_number(num):
         return "Zero"
 number = float(input("Enter a number: "))
 result = check_number(number)
-print("The number is {result}.")
+print(f"The number is '{result}'.")
 
 # Write a program to check if a given character is a vowel or a consonant?
 
@@ -62,7 +62,7 @@ else:
     print(f"{year} is not a leap year.")
 
 # Write a python program to check if a year is a century year or not.
-    
+     
 def is_century_year(year):
     if year % 100 == 0:
         return True
